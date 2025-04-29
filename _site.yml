@@ -16,8 +16,11 @@ navbar:
     - text: "About"
       href: about.html
 
-output:
-  html_document:
-    theme: readable     # 主题
-    toc: true           # 是否生成目录
-    toc_depth: 2        # 目录层级
+
+# # Explicit list of Rmd files to render (including subdirectories)
+# files:
+#   - index.Rmd
+#   - content.Rmd
+#   - analysis/experiment1.Rmd
+#   - analysis/experiment2.Rmd
+#   - about.Rmd

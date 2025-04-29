@@ -2,7 +2,7 @@
 title: "Mendelian randomization wiki"
 output: 
   html_document:
-    theme: united
+    theme: brite
     toc: true             # 开启目录
     toc_float:            # 浮动到左边
       collapsed: false    # 默认展开
@@ -17,7 +17,7 @@ This repo page contains the topics in MR analysis, primarily driven by the Natar
 -   [Effect estimation and inference](test2.html)
 -   [Weak instrument](test2.html)
 -   [IV validity](test2.html)
--   [Robust MR analysis](test3.html)
+-   [Robust MR analysis](robustMR.html)
 -   [Sample overlap](test2.html)
 
 # Advanced MR analysis

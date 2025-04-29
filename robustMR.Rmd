@@ -1,0 +1,53 @@
+---
+title: "RobustMR"
+output: 
+  html_document:
+    theme: brite
+    toc: true             # 开启目录
+    toc_float:            # 浮动到左边
+      collapsed: false    # 默认展开
+      smooth_scroll: true # 滑动时高亮
+---
+
+# Robust MR analysis
+
+Robust MR methods refer to those methods that, under its own certain assumptions, can provide valid MR results when (some or all) instruments are invalid
+
+It is necessary to implement multiple robust MR methods to check if your MR results are sensitive to the robust methods. Ideally, if your MR results are consistent over all robust MR methods, your conclusion becomes convincing
+
+Below is the table for some common robust MR methods using only summary data
+
+|                          | Valid IV exists                         | All IVs can be invalid                 |
+|------------------|------------------|-----------------------------------|
+| **Consensus-style**      | Weighted-median <br> Mode-based <br>... | N/A                                    |
+| **Outlier-remove-style** | MR-PRESSO<br> MR-Lasso<br> ...          | N/A                                    |
+| **Model-style**          | MR-Contamination<br> MR-Mix<br> ...     | MR-Egger<br> MR-RAPS<br> CAUSE<br> ... |
+
+Note: All robust MR methods require multiple variants. If you only have one instrument (single variant or PRS), you cannot implement robust MR analysis. However, it does not mean that a single variant is bad in MR analysis; if you have domain knowledge of the validity of the single variant (e.g. cis-eQTL for eGene expression as the exposure), MR result with this single variant is more convincing in my eyes to the MR result with multiple variants and robust MR methods.
+
+
+# Pick robust MR methods
+There is no absolute way to pick robust MR methods, I would select 1-2 methods from the valid-IV-exits column (better with different styles) and 2-3 methods from the all-IV-can-be-invalid column (all are model-style).
+
+You can always include more methods (the more methods your MR results maintain uniform with, the more convincing your conclusion will be), but I usually pick more methods when reviewers required
+
+The most common pick of robust MR methods is (weighted-median, mode-based, MR-PRESSO, MR-Egger, MR-RAPS)
+
+Since in reality, it is very common that some (or even all) your variants are invalid, you will find that your robust MR methods' results are not consistent well. You may have some undesired results from some robust MR methods (e.g. your IVW result and some robust MR results are significantly positive, but some robust MR results are significantly negative). In this scenario, you need to try to combine your domain knowledge (and sometimes specific knowledge on certain robust MR methods) to interpret the results and justify your conclusion.
+
+Note that it is fine if your robust MR results are either nonsignificant or significant in the same effect direct (because many robust MR methods are of low power); we are mainly concerned with the case that some robust MR methods indicate significant effects with the opposite direction
+
+## MR-Egger
+
+MR-Egger is the robust MR method that often causes inconsistent significant effect
+
+MR-Egger is a good method for investigating pleiotropy (i.e. via the intercept p-value; given that we do not suffer from weak-IV issue or have taken the weak-IV into account) but usually a bad method for effect estimation; However, MR-Egger is very popular, so you may still include MR-Egger in your robust MR methods.
+
+There are many reasons that MR-Egger is unreliable, so we need to find the best reason in your case; one useful way is to look into the scatterplot of genetic association with the exposure and outcome
+
+```{r}
+library(MendelianRandomization) 
+#mr_plot(mr_input(bx, bxse, by, byse ))
+```
+
+where `bx` and `by` are the genetic association with your exposure and outcome, respectively; `bxse` and `byse` are the standard error of `bx` and `by`, respectively

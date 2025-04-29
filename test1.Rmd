@@ -2,6 +2,7 @@
 title: "test 1"
 output:
   html_document:
+    theme: brite
     toc: true             # 开启目录
     toc_float:            # 浮动到左边
       collapsed: false    # 默认展开
