@@ -8,11 +8,11 @@ navbar:
     - text: "Analysis"
       menu:
         - text: "Experiment 1"
-          href: analysis/experiment1.html
+          href: test1.html
         - text: "Experiment 2"
-          href: analysis/experiment2.html
+          href: test2.html
         - text: "Utils"
-          href: analysis/utils.html
+          href: test3.html
     - text: "About"
       href: about.html
 
