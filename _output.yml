@@ -1,0 +1,3 @@
+# _output.yml：全站默认 HTML 输出配置
+html_document:
+  theme: united     # 统一使用 United 主题

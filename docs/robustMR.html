@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -433,10 +433,8 @@ MR-Egger in your robust MR methods.</p>
 <p>There are many reasons that MR-Egger is unreliable, so we need to
 find the best reason in your case; one useful way is to look into the
 scatterplot of genetic association with the exposure and outcome</p>
-<pre class="r"><code>library(MendelianRandomization) </code></pre>
-<pre><code>## Warning in .recacheSubclasses(def@className, def, env): undefined subclass
-## &quot;ndiMatrix&quot; of class &quot;replValueSp&quot;; definition not updated</code></pre>
-<pre class="r"><code>#mr_plot(mr_input(bx, bxse, by, byse ))</code></pre>
+<pre class="r"><code>library(MendelianRandomization) 
+#mr_plot(mr_input(bx, bxse, by, byse ))</code></pre>
 <p>where <code>bx</code> and <code>by</code> are the genetic association
 with your exposure and outcome, respectively; <code>bxse</code> and
 <code>byse</code> are the standard error of <code>bx</code> and
@@ -493,7 +491,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2",
+      selectors: "h1,h2,h3",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
