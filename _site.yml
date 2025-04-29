@@ -1,12 +1,16 @@
-name: "."
-title: "HDTian MR page"
-description: |
-  HDTian 的个人网站
-output_dir: "_site"
+name: "MySite"          # 站点名称，可随意
+output_dir: "docs"      # 渲染后文件夹
+
 navbar:
-  right:
-    - text: "Home"
+  title: "网站标题aa"      # 导航栏左侧标题
+  left:
+    - text: "Home"       # 文本与链接
       href: index.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+
+output:
+  html_document:
+    theme: readable     # 主题
+    toc: true           # 是否生成目录
+    toc_depth: 2        # 目录层级
