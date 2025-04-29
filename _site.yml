@@ -1,18 +1,12 @@
-# _site.yml
-
-name: "MySite"          # 站点名称，可随意
-output_dir: "docs"      # 渲染后文件夹
-
+name: "."
+title: "HDTian 的个人网站"
+description: |
+  HDTian 的个人网站
+output_dir: "_site"
 navbar:
-  title: "网站标题"      # 导航栏左侧标题
-  left:
-    - text: "首页"       # 文本与链接
+  right:
+    - text: "Home"
       href: index.html
-    - text: "关于"
+    - text: "About"
       href: about.html
-
-output:
-  html_document:
-    theme: readable     # 主题
-    toc: true           # 是否生成目录
-    toc_depth: 2        # 目录层级
+output: distill::distill_article
