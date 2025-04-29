@@ -1,11 +1,18 @@
-name: "MySite"          # 站点名称，可随意
-output_dir: "docs"      # 渲染后文件夹
-
+name: "HDTian Site"
+output_dir: "docs"        # 渲染输出到 docs/
 navbar:
-  title: "网站标题aa"      # 导航栏左侧标题
+  title: "MR"
   left:
-    - text: "Home"       # 文本与链接
+    - text: "Home"
       href: index.html
+    - text: "Analysis"
+      menu:
+        - text: "Experiment 1"
+          href: analysis/experiment1.html
+        - text: "Experiment 2"
+          href: analysis/experiment2.html
+        - text: "Utils"
+          href: analysis/utils.html
     - text: "About"
       href: about.html
 
