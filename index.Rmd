@@ -1,18 +1,30 @@
-
-
 ---
-title: "My Website"
+title: "Mendelian randomization wiki"
 output: 
   html_document:
     theme: united
+    toc: true             # 开启目录
+    toc_float:            # 浮动到左边
+      collapsed: false    # 默认展开
+      smooth_scroll: true # 滑动时高亮
 ---
 
-# Welcome
+This repo page contains the topics in MR analysis, primarily driven by the Natarajan Lab’s research. It is expected to be updated over the long term.
 
-say something
+# MR fundamentals
 
-# Contents
+-   [Instrument selection](test1.html)
+-   [Effect estimation and inference](test2.html)
+-   [Weak instrument](test2.html)
+-   [IV validity](test2.html)
+-   [Robust MR analysis](test3.html)
+-   [Sample overlap](test2.html)
 
-- [MR 1](test1.html)
-- [MR 2](test2.html)
-- [MR 3](test3.html)
+# Advanced MR analysis
+
+-   [Multivariable MR](test1.html)
+-   [Bi-directional MR](test1.html)
+-   [Mediation analysis](test1.html)
+-   [Nonlinear MR](test1.html)
+-   [Effect heterogeneity analysis](test1.html)
+-   [Time-varying MR](test1.html)

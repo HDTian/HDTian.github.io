@@ -5,14 +5,14 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Analysis"
-      menu:
-        - text: "Experiment 1"
-          href: test1.html
-        - text: "Experiment 2"
-          href: test2.html
-        - text: "Utils"
-          href: test3.html
+    # - text: "Analysis"
+    #   menu:
+    #     - text: "Experiment 1"
+    #       href: test1.html
+    #     - text: "Experiment 2"
+    #       href: test2.html
+    #     - text: "Utils"
+    #       href: test3.html
     - text: "About"
       href: about.html
 
