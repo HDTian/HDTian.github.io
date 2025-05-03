@@ -12,14 +12,22 @@ This repo page contains the topics in MR analysis, primarily driven by the Natar
 
 # MR fundamentals
 
+-   [What is MR](test1.html)
+-   [Basic concepts](test1.html)
+-   [Mostly harmless statistics](test1.html)
+
+# MR concepts
+
 -   [Instrument selection](test1.html)
--   [Effect estimation and inference](test2.html)
+-   [Estimation methods](test2.html)
 -   [Weak instrument](test2.html)
+-   [Sample-overlap-related issues](test2.html)
 -   [IV validity](test2.html)
 -   [Robust MR analysis](robustMR.html)
--   [Sample overlap](test2.html)
+-   [Estimation-related issues](test1.html)
 
-# Advanced MR analysis
+
+# MR advanced models
 
 -   [Multivariable MR](test1.html)
 -   [Bi-directional MR](test1.html)
@@ -27,3 +35,7 @@ This repo page contains the topics in MR analysis, primarily driven by the Natar
 -   [Nonlinear MR](test1.html)
 -   [Effect heterogeneity analysis](test1.html)
 -   [Time-varying MR](test1.html)
+-   [Discovery-type MR](test1.html)
+
+# Other MR sources
+
